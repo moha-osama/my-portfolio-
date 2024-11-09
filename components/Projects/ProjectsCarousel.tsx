@@ -38,20 +38,12 @@ const ProjectsCarousel = () => {
             items: 3,
             partialVisibilityGutter: 40,
           },
-          mobile: {
+          tablet: {
             breakpoint: {
-              max: 464,
+              max: 760,
               min: 0,
             },
             items: 1,
-            partialVisibilityGutter: 30,
-          },
-          tablet: {
-            breakpoint: {
-              max: 1024,
-              min: 464,
-            },
-            items: 2,
             partialVisibilityGutter: 30,
           },
         }}
