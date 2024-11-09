@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="container mx-auto pt-6 md:pt-12 lg:pt-24 lg:min-h-screen flex items-start lg:items-center relative"
+      className="container mx-auto pt-12 lg:pt-24 lg:min-h-screen flex items-start lg:items-center relative"
     >
       <div className="grid max-w-screen-xl px-4 py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="place-self-center lg:col-span-7">

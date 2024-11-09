@@ -19,7 +19,7 @@ const SectionTitle = ({ title, previewAction }: SectionTitleProps) => {
       <Image src={solgan} width={20} height={20} quality={100} alt="solgan" />
       <div
         className={`absolute right-4 md:right-16  ${
-          previewAction ? "bottom-0" : ""
+          previewAction ? "-bottom-4 lg:bottom-0" : ""
         }`}
       >
         {previewAction}

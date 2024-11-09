@@ -24,7 +24,12 @@ const ProjectCard = () => {
           style={{ clipPath: "url(#clipShape)" }}
         >
           <div className="border-b">
-            <h1 className="text-white text-3xl p-8 font-bold">Landing Page</h1>
+            <h1
+              className="text-white text-2xl
+             md:text-3xl p-8 font-bold"
+            >
+              Landing Page
+            </h1>
           </div>
           <div className="img-docs h-full flex items-end relative">
             <Image
