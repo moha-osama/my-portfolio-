@@ -27,7 +27,7 @@ const CustomSlider = ({ items }: CustomSliderProps) => {
     setCurrSlide(index);
   };
 
-  let translateX = currSlide * 200;
+  const translateX = currSlide * 200;
 
   return (
     <div className="relative mx-8 w-full lg:w-[80%] overflow-hidden">
