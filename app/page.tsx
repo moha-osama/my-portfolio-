@@ -12,7 +12,7 @@ export default function Home() {
         <Technologies />
       </div>
       <AboutMe />
-      <div className="hidden lg:block">
+      <div id="technologies" className="hidden lg:block">
         <Technologies />
       </div>
       <Experince />

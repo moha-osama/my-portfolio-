@@ -5,9 +5,10 @@ import Image from "next/image";
 
 interface CardProps {
   skill: { label: string; icon: string };
+  className?: string;
 }
 
-const Card = ({ skill }: CardProps) => {
+const Card = ({ skill, className }: CardProps) => {
   const cardRef = React.useRef<HTMLLIElement>(null);
 
   const [position, setPosition] = React.useState({ x: 0, y: 0 });
@@ -29,7 +30,7 @@ const Card = ({ skill }: CardProps) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={cardRef}
-      className="list-none mx-2 rounded-3xl backdrop-blur-xl p-4 lg:p-8 h-fit w-fit"
+      className={`list-none mx-2 rounded-3xl backdrop-blur-xl p-4 lg:p-8 h-fit w-fit ${className}`}
       style={{
         background: `${
           position.x !== 0 || position.y !== 0

@@ -42,57 +42,63 @@ const Experience = () => {
   }, [workExperience]);
 
   return (
-    <section className="container mx-auto w-[80%] 2xl:w-[65%] lg:min-h-screen">
-      <div className="py-6 lg:py-12">
-        <SectionTitle title="My Work Experience" />
-      </div>
-      <ul className="flex flex-col gap-12">
-        {workExperience.map((experience, index) => (
-          <li
-            key={experience.company}
-            className="flex flex-col md:flex-row items-start justify-between"
-          >
-            <div className="flex items-center justify-between w-full md:w-fit md:items-start md:flex-col">
-              <h1 className="text-white text-xl md:text-2xl font-semibold max-w-52 md:max-w-60 lg:max-w-none">
-                {experience.company}
-              </h1>
-              <p className="text-[#98A2B3] text-sm md:text-lg font-normal">
-                {experience.startDate} - {experience.endDate}
-              </p>
-            </div>
-
-            <div
-              className="d-none lg:relative"
-              ref={(el: any) => (descriptionRefs.current[index] = el)}
+    <section
+      id="experience"
+      className="container mx-auto w-[80%] 2xl:w-[65%] lg:min-h-screen py-32"
+    >
+      <div>
+        <div className="py-6 lg:py-12">
+          <SectionTitle title="My Work Experience" />
+        </div>
+        <ul className="flex flex-col gap-12">
+          {workExperience.map((experience, index) => (
+            <li
+              key={experience.company}
+              className="flex flex-col md:flex-row items-start justify-between"
             >
-              <h1 className="text-white text-xl md:text-2xl font-semibold">
-                {experience.position}
-              </h1>
-
-              <div className="flex flex-col justify-center items-center absolute top-0 -left-12">
-                <div
-                  className={`w-9 h-9 rounded-full border-4 ${
-                    experience.endDate !== "Present"
-                      ? "bg-[#fff]"
-                      : "bg-[#DAA520]"
-                  }`}
-                ></div>
-
-                {index !== workExperience.length - 1 && heights.length > 0 && (
-                  <div
-                    className="w-1 bg-[#fff]"
-                    style={{ height: `${heights[index]}px` }}
-                  ></div>
-                )}
+              <div className="flex items-center justify-between w-full md:w-fit md:items-start md:flex-col">
+                <h1 className="text-white text-xl md:text-2xl font-semibold max-w-52 md:max-w-60 lg:max-w-none">
+                  {experience.company}
+                </h1>
+                <p className="text-[#98A2B3] text-sm md:text-lg font-normal">
+                  {experience.startDate} - {experience.endDate}
+                </p>
               </div>
 
-              <p className="text-[#98A2B3] text-sm md:text-lg font-normal max-w-[27rem]">
-                {experience.description}
-              </p>
-            </div>
-          </li>
-        ))}
-      </ul>
+              <div
+                className="d-none lg:relative"
+                ref={(el: any) => (descriptionRefs.current[index] = el)}
+              >
+                <h1 className="text-white text-xl md:text-2xl font-semibold">
+                  {experience.position}
+                </h1>
+
+                <div className="flex flex-col justify-center items-center absolute top-0 -left-12">
+                  <div
+                    className={`w-9 h-9 rounded-full border-4 ${
+                      experience.endDate !== "Present"
+                        ? "bg-[#fff]"
+                        : "bg-[#DAA520]"
+                    }`}
+                  ></div>
+
+                  {index !== workExperience.length - 1 &&
+                    heights.length > 0 && (
+                      <div
+                        className="w-1 bg-[#fff]"
+                        style={{ height: `${heights[index]}px` }}
+                      ></div>
+                    )}
+                </div>
+
+                <p className="text-[#98A2B3] text-sm md:text-lg font-normal max-w-[27rem]">
+                  {experience.description}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </section>
   );
 };

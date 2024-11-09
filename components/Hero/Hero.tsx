@@ -9,7 +9,10 @@ const Hero: React.FC = () => {
   const imageRef = useRef<any>(null);
 
   return (
-    <section className="container mx-auto lg:py-0 lg:min-h-screen flex items-start lg:items-center relative">
+    <section
+      id="hero"
+      className="container mx-auto pt-6 md:pt-12 lg:pt-24 lg:min-h-screen flex items-start lg:items-center relative"
+    >
       <div className="grid max-w-screen-xl px-4 py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
         <div className="place-self-center lg:col-span-7">
           <div className="flex flex-col">
@@ -31,10 +34,13 @@ const Hero: React.FC = () => {
             </div>
           </div>
           <div className="flex gap-4 mt-4">
-            <button className="px-5 py-2 text-black bg-white rounded-lg">
+            <a
+              href="mailto:zmuhamedosama@gmail.com"
+              className="px-5 py-2 text-black bg-white rounded-lg hover:bg-[#654A06] hover:text-white duration-300 active:scale-[1.1]"
+            >
               Get In Touch
-            </button>
-            <button className="px-5 py-2 text-white border border-white rounded-lg">
+            </a>
+            <button className="px-5 py-2 text-white border border-white rounded-lg hover:bg-white duration-300 hover:text-[#654A06] active:scale-[1.1]">
               View Projects
             </button>
           </div>

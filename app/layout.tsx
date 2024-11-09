@@ -16,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${cairo.className} antialiased overflow-x-hidden`}>
+    <html suppressHydrationWarning={true} lang="en">
+      <body
+        className={`${cairo.className} antialiased overflow-x-hidden relative`}
+      >
         <Header />
         <main>{children}</main>
       </body>

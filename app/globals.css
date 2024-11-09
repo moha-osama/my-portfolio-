@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: #171717;
   --foreground: #ffffff;
@@ -21,6 +25,15 @@ body {
 }
 
 @layer utilities {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  section {
+    scroll-snap-align: start;
+  }
+
   .project-card button,
   .project-card button svg,
   .project-card .card-bg {
