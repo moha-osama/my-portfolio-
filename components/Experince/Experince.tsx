@@ -47,7 +47,7 @@ const Experience = () => {
       className="container mx-auto w-[80%] 2xl:w-[65%] lg:min-h-screen py-12 lg:py-32"
     >
       <div>
-        <div className="py-6 lg:py-12">
+        <div className="py-0 lg:py-12">
           <SectionTitle title="My Work Experience" />
         </div>
         <ul className="flex flex-col gap-12">

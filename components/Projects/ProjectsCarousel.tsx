@@ -4,6 +4,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProjectCard from "./ProjectCard";
+import ButtonGroup from "./ButtonGroup";
 
 const ProjectsCarousel = () => {
   return (
@@ -17,7 +18,7 @@ const ProjectsCarousel = () => {
         arrows={false}
         autoPlaySpeed={3000}
         centerMode={false}
-        className=""
+        className="items-center"
         dotListClass=""
         draggable
         focusOnSelect={false}
@@ -40,6 +41,14 @@ const ProjectsCarousel = () => {
           },
           tablet: {
             breakpoint: {
+              max: 1024,
+              min: 760,
+            },
+            items: 2,
+            partialVisibilityGutter: 30,
+          },
+          mobile: {
+            breakpoint: {
               max: 760,
               min: 0,
             },
@@ -53,8 +62,9 @@ const ProjectsCarousel = () => {
         shouldResetAutoplay
         showDots={false}
         sliderClass=""
-        slidesToSlide={3}
+        slidesToSlide={1}
         swipeable
+        customButtonGroup={<ButtonGroup />}
       >
         <ProjectCard />
         <ProjectCard />

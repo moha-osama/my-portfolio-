@@ -71,9 +71,20 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
   const containerRef = React.useRef(null);
   const { height } = useDimensions(containerRef);
 
+  React.useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
     <motion.nav
-      className="lg:hidden py-8 px-10 w-full h-full"
+      className={`lg:hidden py-8 px-10 w-full h-full`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
@@ -85,7 +96,9 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
       />
       <motion.ul
         variants={ulVariants}
-        className="z-50 absolute left-0 w-full flex gap-8 flex-col items-center justify-center"
+        className={`${
+          !isOpen ? "hidden" : "top-0"
+        } z-50 absolute left-0 w-full flex gap-8 flex-col items-center justify-center h-screen`}
       >
         {navItems.map((item) => (
           <motion.li

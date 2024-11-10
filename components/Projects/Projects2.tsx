@@ -11,7 +11,7 @@ const Projects2 = () => {
           <div className="pt-6 md:pt-28">
             <SectionTitle title="Some Recent Projects" />
           </div>
-          <div className="w-full 2xl:w-4/5">
+          <div className="w-full xl:max-w-[75.5rem]">
             <ProjectsCarousel />
           </div>
         </div>

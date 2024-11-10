@@ -19,7 +19,7 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="container flex items-center justify-center pt-0 lg:pt-36 mx-auto lg:h-screen"
+      className="container flex items-center justify-center pt-8 lg:pt-36 mx-auto lg:h-screen"
     >
       <div>
         <SectionTitle title="Know More About Me" />
