@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import pyramid from "@/assets/pyramid-gold-4000x4000.png";
 import Luminaire from "../Luminaire/Luminaire";
+import Links from "./Links";
 
 const Hero: React.FC = () => {
   const imageRef = useRef<any>(null);
@@ -11,9 +12,9 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="container mx-auto pt-12 lg:pt-24 lg:min-h-screen flex items-start lg:items-center relative"
+      className="container mx-auto pt-8 lg:pt-24 h-[calc(100vh-4rem)] lg:min-h-screen flex items-start lg:items-center relative"
     >
-      <div className="grid max-w-screen-xl px-4 py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+      <div className="grid max-w-screen-xl px-4 py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full">
         <div className="place-self-center lg:col-span-7">
           <div className="flex flex-col">
             <h3 className="text-xl md:text-3xl text-white font-bold opacity-85">
@@ -24,12 +25,12 @@ const Hero: React.FC = () => {
                 Front-end Developer
               </h1>
               <p className="text-md md:text-2xl tracking-wider text-white">
-                As a highly competent front-end developer, I have created a
-                diverse range of projects which showcase my technical skills and
-                expertise. My proficiency in HTML, CSS, and JavaScript and
-                popular frameworks such as React, I also have experience in
-                popular CSS frameworks to create beautiful UI designs and
-                responsive layouts
+                Junior Frontend Developer skilled in technologies such as React,
+                Next.js, and Tailwind CSS, with a strong background in creating
+                engaging user interfaces and web applications. He holds a
+                Bachelor of Science in Computer Science and Physics from Helwan
+                University and has experience working on SaaS platforms and
+                various web projects.
               </p>
             </div>
           </div>
@@ -40,10 +41,13 @@ const Hero: React.FC = () => {
             >
               Get In Touch
             </a>
-            <button className="px-5 py-2 text-white border border-white rounded-lg hover:bg-white duration-300 hover:text-[#654A06] active:scale-[1.1]">
-              View Projects
-            </button>
+            <a href="#projects">
+              <button className="px-5 py-2 text-white border border-white rounded-lg hover:bg-white duration-300 hover:text-[#654A06] active:scale-[1.1]">
+                View Projects
+              </button>
+            </a>
           </div>
+          <Links />
         </div>
         <div className="hidden lg:flex lg:mt-0 lg:col-span-5">
           <Luminaire className="w-[37rem] h-[27rem] m-[50px]" />

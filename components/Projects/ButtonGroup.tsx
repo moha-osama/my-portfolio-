@@ -5,7 +5,7 @@ const ButtonGroup = ({ next, previous, goToSlide, ...rest }: any) => {
     carouselState: { currentSlide },
   } = rest;
   return (
-    <div className="flex items-center justify-between absolute w-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+    <div className="flex items-center justify-between absolute w-full left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 px-2 md:px-0">
       <button
         onClick={() => previous()}
         className={`text-3xl text-[#dea30d] hover:bg-[#dea30d] hover:text-white duration-300 rounded-full p-1 ${
