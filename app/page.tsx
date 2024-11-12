@@ -8,9 +8,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <div className="lg:hidden">
-        <Technologies />
-      </div>
       <AboutMe />
       <div id="technologies" className="hidden lg:block">
         <Technologies />

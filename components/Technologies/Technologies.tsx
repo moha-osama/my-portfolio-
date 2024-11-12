@@ -81,7 +81,7 @@ const Technologies = () => {
 
   return (
     <section
-      className={`flex items-start justify-center py-6 lg:pt-32 mx-auto ${
+      className={`flex items-start justify-center lg:pt-32 mx-auto ${
         previewModeActive.row ? "lg:h-screens" : ""
       }`}
     >

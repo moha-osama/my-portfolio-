@@ -19,9 +19,9 @@ const AboutMe = () => {
   return (
     <section
       id="about-me"
-      className="lg:h-screen bg-[url('/projects-background-image.png')] rounded-3xl bg-contain"
+      className="lg:h-screen mt-12 bg-[url('/projects-background-image.png')] rounded-3xl bg-contain"
     >
-      <div className="container py-12 lg:pt-40 flex flex-col mx-auto items-center justify-center">
+      <div className="container pt-6 pb-12 lg:pt-40 flex flex-col mx-auto items-center justify-center">
         <SectionTitle title="Know More About Me" />
         <div className="flex items-center">
           <div className="grid max-w-screen-xl px-4 py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">

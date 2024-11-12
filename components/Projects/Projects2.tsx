@@ -5,9 +5,9 @@ import ProjectsCarousel from "./ProjectsCarousel";
 
 const Projects2 = () => {
   return (
-    <section id="projects" className="my-24 lg:min-h-screen flex items-center">
-      <div className="w-full">
-        <div className="flex flex-col items-center justify-between bg-[url('/projects-background-image.png')] rounded-3xl bg-contain">
+    <section id="projects" className="min-h-screen flex items-center">
+      <div className="w-full h-full">
+        <div className="flex flex-col items-center justify-between bg-[url('/projects-background-image.png')] h-full rounded-3xl bg-contain">
           <div className="pt-6 md:pt-28">
             <SectionTitle title="Some Recent Projects" />
           </div>

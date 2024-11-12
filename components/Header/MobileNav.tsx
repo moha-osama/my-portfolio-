@@ -84,7 +84,7 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
 
   return (
     <motion.nav
-      className={`lg:hidden py-8 px-10 w-full h-full`}
+      className={`lg:hidden py-10 px-10 w-full h-full`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
