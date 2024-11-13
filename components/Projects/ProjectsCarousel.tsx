@@ -5,8 +5,13 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProjectCard from "./ProjectCard";
 import ButtonGroup from "./ButtonGroup";
+import Link from "next/link";
 
-const ProjectsCarousel = () => {
+interface ProjectsCarouselProps {
+  projects: { id: string; img: string; title: string; href: string }[];
+}
+
+const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
   return (
     <div
       style={{
@@ -66,12 +71,11 @@ const ProjectsCarousel = () => {
         swipeable
         customButtonGroup={<ButtonGroup />}
       >
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
-        <ProjectCard />
+        {projects.map((project) => (
+          <Link href={project.href} key={project.id}>
+            <ProjectCard title={project.title} cover={project.img} />
+          </Link>
+        ))}
       </Carousel>
     </div>
   );

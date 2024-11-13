@@ -1,7 +1,12 @@
 import React from "react";
 import Image from "next/image";
 
-const ProjectCard = () => {
+interface ProjectCardProps {
+  cover: string;
+  title: string;
+}
+
+const ProjectCard = ({ cover, title }: ProjectCardProps) => {
   return (
     <div className="project-card hover:cursor-pointer w-fit scale-[0.65] md:scale-75 lg:scale-[0.65] xl:scale-75">
       <div className="relative rounded-3xl">
@@ -25,12 +30,12 @@ const ProjectCard = () => {
         >
           <div className="border-b">
             <h1 className="text-white text-2xl md:text-3xl p-8 font-bold">
-              Landing Page
+              {title}
             </h1>
           </div>
-          <div className="img-docs h-full flex items-end relative">
+          <div className="img-docs h-full flex items-end relative bg-bottom">
             <Image
-              src="/cover.jpg"
+              src={cover}
               className="h-4/5 object-cover rounded-t-3xl absolute z-40"
               quality={100}
               width={1024}
