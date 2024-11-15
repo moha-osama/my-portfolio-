@@ -28,31 +28,25 @@ const Projects2 = () => {
           <div className="pt-6 md:pt-40 w-full">
             <SectionTitle
               title="Some Recent Projects"
-              previewAction={handlePreviewModeChange}
+              // previewAction={handlePreviewModeChange}
             />
           </div>
-          <div className="w-full xl:max-w-[75.5rem]">
-            {previewMode.row ? (
-              <ProjectsCarousel projects={projects} />
-            ) : (
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center pb-24">
-                {projects.slice(0, visibleCount).map((project) => (
-                  <ProjectCard
-                    key={project.id}
-                    cover={project.img}
-                    title={project.title}
-                    href={project.href}
-                  />
-                ))}
-                {visibleCount < projects.length && (
-                  <button
-                    className="col-span-1 sm:col-span-2 lg:col-span-3 px-12 py-6 text-xl bg-[#684B03] hover:bg-[#FFD700] duration-300 rounded-3xl "
-                    onClick={showMoreProjects}
-                  >
-                    Show More
-                  </button>
-                )}
-              </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center pb-24">
+            {projects.slice(0, visibleCount).map((project) => (
+              <ProjectCard
+                key={project.id}
+                cover={project.img}
+                title={project.title}
+                href={project.href}
+              />
+            ))}
+            {visibleCount < projects.length && (
+              <button
+                className="col-span-1 sm:col-span-2 lg:col-span-3 px-12 py-6 text-xl bg-[#684B03] hover:bg-[#FFD700] duration-300 rounded-3xl "
+                onClick={showMoreProjects}
+              >
+                Show More
+              </button>
             )}
           </div>
         </div>

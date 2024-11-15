@@ -11,7 +11,7 @@ interface ProjectCardProps {
 const ProjectCard = ({ cover, title, href }: ProjectCardProps) => {
   return (
     <Link href={href}>
-      <div className="project-card hover:cursor-pointer w-fit scale-[0.65] md:scale-75 lg:scale-[0.65] xl:scale-75">
+      <div className="project-card hover:cursor-pointer w-fit scale-75 lg:scale-[0.65] xl:scale-75">
         <div className="relative rounded-3xl">
           <svg
             className="backdrop-blur-sm"
