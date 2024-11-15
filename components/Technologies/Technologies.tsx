@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 
 import SectionTitle from "../Section Title/SectionTitle";
 import Marquee from "react-fast-marquee";
@@ -9,7 +9,12 @@ import { skills } from "@/constant";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Technologies = () => {
-  let isMobile = window.innerWidth <= 650;
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  useEffect(() => {
+    let isMobile = window.innerWidth <= 650;
+    setIsMobile(isMobile);
+  }, []);
 
   const [previewModeActive, setPreviewModeActive] = React.useState({
     row: true,
