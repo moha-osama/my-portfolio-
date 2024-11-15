@@ -5,7 +5,6 @@ import SectionTitle from "../Section Title/SectionTitle";
 import ProjectsCarousel from "./ProjectsCarousel";
 import { projects } from "@/constant";
 import ProjectCard from "./ProjectCard";
-import Link from "next/link";
 
 const Projects2 = () => {
   const [previewMode, setPreviewMode] = React.useState({
@@ -38,9 +37,12 @@ const Projects2 = () => {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center pb-24">
                 {projects.slice(0, visibleCount).map((project) => (
-                  <Link href={project.href} key={project.id}>
-                    <ProjectCard cover={project.img} title={project.title} />
-                  </Link>
+                  <ProjectCard
+                    key={project.id}
+                    cover={project.img}
+                    title={project.title}
+                    href={project.href}
+                  />
                 ))}
                 {visibleCount < projects.length && (
                   <button

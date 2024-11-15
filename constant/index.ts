@@ -14,7 +14,7 @@ export const projects = [
   {
     id: "p3",
     title: "Dreambill",
-    href: "https://dream-bill.vercel.app/",
+    href: "https://www.dreambill.io/",
     img: "/projects/dreambill.png",
   },
   {

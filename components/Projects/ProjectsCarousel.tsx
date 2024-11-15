@@ -5,7 +5,6 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProjectCard from "./ProjectCard";
 import ButtonGroup from "./ButtonGroup";
-import Link from "next/link";
 
 interface ProjectsCarouselProps {
   projects: { id: string; img: string; title: string; href: string }[];
@@ -72,9 +71,12 @@ const ProjectsCarousel = ({ projects }: ProjectsCarouselProps) => {
         customButtonGroup={<ButtonGroup />}
       >
         {projects.map((project) => (
-          <Link href={project.href} key={project.id}>
-            <ProjectCard title={project.title} cover={project.img} />
-          </Link>
+          <ProjectCard
+            key={project.id}
+            title={project.title}
+            cover={project.img}
+            href={project.href}
+          />
         ))}
       </Carousel>
     </div>

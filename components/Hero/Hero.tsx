@@ -6,6 +6,7 @@ import pyramid from "@/assets/pyramid-gold-4000x4000.png";
 import Luminaire from "../Luminaire/Luminaire";
 import Links from "./Links";
 import Technologies from "../Technologies/Technologies";
+import { motion } from "framer-motion";
 
 const Hero: React.FC = () => {
   const imageRef = useRef<any>(null);
@@ -17,7 +18,11 @@ const Hero: React.FC = () => {
     >
       <div className="container mx-auto pt-4 lg:pt-28">
         <div className="grid max-w-screen-xl py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full">
-          <div className="place-self-center px-4 lg:col-span-7">
+          <motion.div
+            style={{ x: -400, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            className="place-self-center px-4 lg:col-span-7"
+          >
             <div className="flex flex-col">
               <h3 className="text-xl lg:text-3xl text-white font-bold opacity-85">
                 👋 Hi, I'm Mohamed Osama
@@ -29,10 +34,8 @@ const Hero: React.FC = () => {
                 <p className="text-md lg:text-2xl tracking-wider text-white">
                   Junior Frontend Developer skilled in technologies such as
                   React, Next.js, and Tailwind CSS, with a strong background in
-                  creating engaging user interfaces and web applications. He
-                  holds a Bachelor of Science in Computer Science and Physics
-                  from Helwan University and has experience working on SaaS
-                  platforms and various web projects.
+                  creating engaging user interfaces and web applications and has
+                  experience working on SaaS platforms and various web projects.
                 </p>
               </div>
             </div>
@@ -50,9 +53,12 @@ const Hero: React.FC = () => {
               </a>
             </div>
             <Links />
-          </div>
-          <div className="hidden lg:flex justify-end lg:mt-0 lg:col-span-5">
-            <Luminaire className="w-[37rem] h-[27rem] m-[50px]" />
+          </motion.div>
+          <motion.div
+            style={{ x: 400, opacity: 0 }}
+            animate={{ x: 100, opacity: 1 }}
+            className="hidden lg:flex justify-end lg:mt-0 lg:col-span-5 relative"
+          >
             <Image
               ref={imageRef}
               src={pyramid}
@@ -60,13 +66,9 @@ const Hero: React.FC = () => {
               width={400}
               height={400}
               quality={100}
-              className="moving-image"
-              style={{
-                position: "absolute",
-                transition: "all 1s ease",
-              }}
+              className="absolute left-0 z-10"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
       <div className="lg:hidden w-full">
@@ -75,6 +77,9 @@ const Hero: React.FC = () => {
       <div className="hidden lg:block absolute -bottom-24 left-0">
         <Luminaire />
       </div>
+      {/* <div className="absolute z-0 -right-40 top-1/2 -translate-y-1/2">
+        <Luminaire className="w-[37rem] h-[27rem] m-[50px]" />
+      </div> */}
     </section>
   );
 };
