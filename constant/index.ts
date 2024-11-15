@@ -1,11 +1,5 @@
 export const projects = [
   {
-    id: "p1",
-    title: "Airbnb Clone",
-    href: "https://airbnb-clone-one-nu.vercel.app/",
-    img: "/projects/airbnb.png",
-  },
-  {
     id: "p2",
     title: "Cars Showcase",
     href: "https://car-showcase-jade.vercel.app/",
@@ -16,6 +10,18 @@ export const projects = [
     title: "Dreambill",
     href: "https://www.dreambill.io/",
     img: "/projects/dreambill.png",
+  },
+  {
+    id: "p1",
+    title: "Airbnb Clone",
+    href: "https://airbnb-clone-one-nu.vercel.app/",
+    img: "/projects/airbnb.png",
+  },
+  {
+    id: "p7",
+    title: "Nuiq",
+    href: "https://nuiq.com/",
+    img: "/projects/nuiq.png",
   },
   {
     id: "p4",
@@ -34,12 +40,6 @@ export const projects = [
     title: "Notes App",
     href: "https://markdown-note-demo-app.netlify.app/",
     img: "/projects/notes.png",
-  },
-  {
-    id: "p7",
-    title: "Nuiq",
-    href: "https://nuiq.com/",
-    img: "/projects/nuiq.png",
   },
   {
     id: "p8",
