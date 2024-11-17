@@ -83,7 +83,7 @@ const Experience = () => {
                     {experience.position}
                   </h1>
 
-                  <div className="flex flex-col justify-center items-center absolute top-0 -left-12">
+                  <div className="hidden lg:flex flex-col justify-center items-center absolute top-0 -left-12">
                     <div
                       className={`w-9 h-9 rounded-full border-4 ${
                         experience.endDate !== "Present"
