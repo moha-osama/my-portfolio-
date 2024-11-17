@@ -72,10 +72,18 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
   const { height } = useDimensions(containerRef);
 
   React.useEffect(() => {
+    let mboileNav = document.getElementById("mobile-nav");
+
     if (isOpen) {
+      mboileNav?.classList.add("h-full");
+      mboileNav?.classList.remove("backdrop-blur-xl", "bg-[#1c1c1c73]/45");
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      setTimeout(() => {
+        mboileNav?.classList.remove("h-full");
+        mboileNav?.classList.add("backdrop-blur-xl", "bg-[#1c1c1c73]/45");
+      }, 350);
     }
     return () => {
       document.body.style.overflow = "";
@@ -84,7 +92,8 @@ const MobileNav = ({ navItems }: MobileNavProps) => {
 
   return (
     <motion.nav
-      className={`lg:hidden py-10 px-10 w-full h-full`}
+      id="mobile-nav"
+      className={`fixed left-0 z-50 lg:hidden py-10 px-10 w-screen backdrop-blur-xl bg-[#1c1c1c73]/45`}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}

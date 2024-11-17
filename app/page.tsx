@@ -9,10 +9,10 @@ export default function Home() {
     <>
       <Hero />
       <AboutMe />
-      <div id="technologies" className="hidden lg:block">
+      <Experince />
+      <div id="technologies" className="">
         <Technologies />
       </div>
-      <Experince />
       <Projects2 />
     </>
   );

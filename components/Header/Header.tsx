@@ -1,7 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import pyramid from "@/assets/pyramid-gold-4000x4000.png";
-import Luminaire from "../Luminaire/Luminaire";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 
@@ -9,8 +6,8 @@ const Header = () => {
   const navItems = [
     { label: "Home", href: "#hero" },
     { label: "About Me", href: "#about-me" },
-    { label: "Technologies", href: "#technologies" },
     { label: "Experince", href: "#experience" },
+    { label: "Technologies", href: "#technologies" },
     { label: "Projects", href: "#projects" },
   ];
 

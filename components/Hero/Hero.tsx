@@ -14,9 +14,9 @@ const Hero: React.FC = () => {
   return (
     <section
       id="hero"
-      className="lg:min-h-screen relative pb-8 flex flex-col items-center justify-center"
+      className="min-h-screen relative flex flex-col items-center justify-center"
     >
-      <div className="container mx-auto pt-4 lg:pt-28">
+      <div className="container mx-auto pt-12 sm:pt-28 px-3 sm:px-0">
         <div className="grid max-w-screen-xl py mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 h-full">
           <motion.div
             style={{ x: -400, opacity: 0 }}
@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
                 <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-normal">
                   Front-end Developer
                 </h1>
-                <p className="text-md lg:text-2xl tracking-wider text-white">
+                <p className="text-md lg:text-2xl tracking-wider text-white text-justify">
                   Junior Frontend Developer skilled in technologies such as
                   React, Next.js, and Tailwind CSS, with a strong background in
                   creating engaging user interfaces and web applications and has
@@ -57,8 +57,11 @@ const Hero: React.FC = () => {
           <motion.div
             style={{ x: 400, opacity: 0 }}
             animate={{ x: 100, opacity: 1 }}
-            className="hidden lg:flex justify-end lg:mt-0 lg:col-span-5 relative"
+            className="hidden lg:flex lg:mt-0 col-span-4 relative"
           >
+            <div className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2">
+              <Luminaire className="" />
+            </div>
             <Image
               ref={imageRef}
               src={pyramid}
@@ -66,13 +69,10 @@ const Hero: React.FC = () => {
               width={400}
               height={400}
               quality={100}
-              className="absolute left-0 z-10"
+              className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
             />
           </motion.div>
         </div>
-      </div>
-      <div className="lg:hidden w-full">
-        <Technologies />
       </div>
       <div className="hidden lg:block absolute -bottom-24 left-0">
         <Luminaire />

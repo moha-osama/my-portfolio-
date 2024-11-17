@@ -46,7 +46,7 @@ const Experience = () => {
     <AnimatePresence>
       <section
         id="experience"
-        className="container mx-auto px-4 md:w-[80%] 2xl:w-[65%] lg:min-h-screen py-6 lg:py-32"
+        className="container mx-auto px-4 md:w-[80%] 2xl:w-[65%] min-h-screen py-20 lg:py-32"
       >
         <div>
           <div className="py-0 lg:py-12">
@@ -64,7 +64,7 @@ const Experience = () => {
                   hidden: { opacity: 0, y: 200 },
                 }}
                 key={experience.company}
-                className="flex flex-col md:flex-row items-start justify-between"
+                className="flex px-4 flex-col md:flex-row items-start justify-between"
               >
                 <div className="flex items-center justify-between w-full md:w-fit md:items-start md:flex-col">
                   <h1 className="text-white text-xl md:text-2xl font-semibold max-w-52 md:max-w-60 lg:max-w-none">
@@ -101,7 +101,7 @@ const Experience = () => {
                       )}
                   </div>
 
-                  <p className="text-[#98A2B3] text-sm md:text-lg font-normal max-w-[27rem]">
+                  <p className="text-[#98A2B3] text-sm md:text-lg font-normal max-w-[27rem] text-justify sm:text-start">
                     {experience.description}
                   </p>
                 </div>

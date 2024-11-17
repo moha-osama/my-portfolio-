@@ -28,24 +28,11 @@ const Technologies = () => {
   return (
     <AnimatePresence>
       <section
-        className={`flex items-start justify-center lg:pt-32 mx-auto ${
+        className={`flex items-start justify-center py-16 lg:py-32 mx-auto ${
           previewModeActive.row ? "lg:h-screens" : ""
         }`}
       >
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.3,
-            delay: isMobile ? 0.3 : 0,
-            ease: "linear",
-          }}
-          variants={{
-            visible: { opacity: 1, y: 0 },
-            hidden: { opacity: 0, y: 200 },
-          }}
-        >
+        <div>
           <div className="py-6 lg:py-12">
             <SectionTitle
               title="Tools I know"
@@ -69,7 +56,7 @@ const Technologies = () => {
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
       </section>
     </AnimatePresence>
   );

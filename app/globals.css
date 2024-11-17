@@ -193,4 +193,7 @@ body {
     initial-value: 0deg;
     inherits: false;
   }
+
+  @media (max-width: 1024px) {
+  }
 }
