@@ -196,7 +196,4 @@ body {
 
   @media (max-width: 1024px) {
   }
-  div {
-    transition: all 0;
-  }
 }
