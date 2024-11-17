@@ -4,7 +4,6 @@ import React from "react";
 import CountUp from "react-countup";
 import SectionTitle from "../Section Title/SectionTitle";
 import { motion, AnimatePresence } from "framer-motion";
-import Technologies from "../Technologies/Technologies";
 
 const stats = [
   { title: "Years of Experience", value: 1 },
@@ -13,8 +12,6 @@ const stats = [
 ];
 
 const AboutMe = () => {
-  const [start, setStart] = React.useState(false);
-
   return (
     <AnimatePresence>
       <section id="about-me" className="h-screen">
@@ -32,7 +29,6 @@ const AboutMe = () => {
                     in popular CSS frameworks to create beautiful UI designs and
                     responsive layouts
                   </p>
-                  {/* <ScrollTrigger onEnter={() => setStart(true)}> */}
                   <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -41,9 +37,9 @@ const AboutMe = () => {
                       visible: { opacity: 1, y: 0 },
                       hidden: { opacity: 0, y: 200 },
                     }}
-                    className="grid grid-cols-1 sm:grid-cols-3 my-4 md:gap-16 bg-[#715204cc] md:w-fit rounded-xl py-3 lg:py-7 px-2 md:px-10"
+                    className="grid grid-cols-1 sm:grid-cols-3 my-4 md:gap-16 bg-[#715204cc] md:w-fit rounded-xl py-3 lg:py-1 px-2 md:px-10"
                   >
-                    {stats.map((item, index) => (
+                    {stats.map((item) => (
                       <div
                         key={item.title}
                         className={`flex flex-col text-center py-4`}
@@ -63,7 +59,6 @@ const AboutMe = () => {
                       </div>
                     ))}
                   </motion.div>
-                  {/* </ScrollTrigger> */}
                 </div>
               </div>
             </div>
