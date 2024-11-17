@@ -7,18 +7,10 @@ import ProjectCard from "./ProjectCard";
 import { motion } from "framer-motion";
 
 const Projects2 = () => {
-  const [previewMode, setPreviewMode] = React.useState({
-    row: true,
-    grid: false,
-  });
   const [visibleCount, setVisibleCount] = React.useState(5);
 
   const showMoreProjects = () => {
     setVisibleCount((prevCount) => prevCount + 5);
-  };
-
-  const handlePreviewModeChange = (mode: string) => {
-    setPreviewMode({ row: mode === "row", grid: mode === "grid" });
   };
 
   return (
@@ -29,14 +21,14 @@ const Projects2 = () => {
             <SectionTitle title="Some Recent Projects" />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center pb-24">
-            {projects.slice(0, visibleCount).map((project) => (
+            {projects.slice(0, visibleCount).map((project, index) => (
               <motion.div
                 key={project.id}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{
-                  duration: 0.3,
+                  delay: 0.1 * index,
                   ease: "linear",
                 }}
                 variants={{
