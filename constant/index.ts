@@ -12,6 +12,18 @@ export const projects = [
     img: "/projects/dreambill.png",
   },
   {
+    id: "p9",
+    title: "Shoe Store",
+    href: "https://shoe-store-moha-osama.vercel.app/",
+    img: "/projects/shoestore.png",
+  },
+  {
+    id: "p5",
+    title: "Jewelry Store",
+    href: "http://jewelry-store-demo-app.netlify.app/",
+    img: "/projects/jewelrystore.png",
+  },
+  {
     id: "p1",
     title: "Airbnb Clone",
     href: "https://airbnb-clone-one-nu.vercel.app/",
@@ -22,18 +34,6 @@ export const projects = [
     title: "Nuiq",
     href: "https://nuiq.com/",
     img: "/projects/nuiq.png",
-  },
-  {
-    id: "p4",
-    title: "Forecast App",
-    href: "https://forecast-demo-app.netlify.app/",
-    img: "/projects/forecastapp.png",
-  },
-  {
-    id: "p5",
-    title: "Jewelry Store",
-    href: "http://jewelry-store-demo-app.netlify.app/",
-    img: "/projects/jewelrystore.png",
   },
   {
     id: "p6",
@@ -48,10 +48,10 @@ export const projects = [
     img: "/projects/quiz.png",
   },
   {
-    id: "p9",
-    title: "Shoe Store",
-    href: "https://shoe-store-moha-osama.vercel.app/",
-    img: "/projects/shoestore.png",
+    id: "p4",
+    title: "Forecast App",
+    href: "https://forecast-demo-app.netlify.app/",
+    img: "/projects/forecastapp.png",
   },
 ];
 

@@ -28,7 +28,6 @@ const Projects2 = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
                 transition={{
-                  delay: 0.1 * index,
                   ease: "linear",
                 }}
                 variants={{
