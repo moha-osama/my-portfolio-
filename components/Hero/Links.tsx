@@ -50,12 +50,16 @@ const links = [
 
 const Links = () => {
   return (
-    <div className="pt-8 md:pt-12 md:pb-8 w-1/2">
+    <div className="pt-8 md:pt-12 md:pb-8 w-9/12 sm:w-1/2">
       <ul className="flex items-center justify-between">
         {links.map((item) => (
           <li key={item.label}>
-            <a href={item.link} className="hover:text-[#dea30d] duration-300">
+            <a
+              href={item.link}
+              className="flex flex-col items-center hover:text-[#dea30d] duration-300"
+            >
               <div className="text-3xl">{item.icon}</div>
+              <p>{item.label}</p>
             </a>
           </li>
         ))}
