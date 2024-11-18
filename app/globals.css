@@ -196,4 +196,8 @@ body {
 
   @media (max-width: 1024px) {
   }
+
+  .switch-btn[data-isOn="true"] {
+    justify-content: flex-end;
+  }
 }

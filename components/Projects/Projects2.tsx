@@ -14,7 +14,10 @@ const Projects2 = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen flex items-center">
+    <section
+      id="projects"
+      className="min-h-screen flex items-center pb-12 mb-12"
+    >
       <div className="w-full h-full">
         <div className="flex flex-col items-center justify-between bg-[url('/projects-background-image.png')] h-full rounded-3xl bg-contain">
           <div className="pt-20 md:pt-40 w-full">

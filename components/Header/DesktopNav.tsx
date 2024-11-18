@@ -44,28 +44,30 @@ const DesktopNav = ({ navItems }: DesktopNavProps) => {
   }, []);
 
   return (
-    <ul className="flex items-center gap-12 relative">
-      {navItems.map((item, index) => (
-        <Link
-          scroll
-          href={item.href}
-          aria-label={item.label}
-          onClick={() => activeNavItemHandler(item)}
-          ref={(el: any) => (navItemsRef.current[index] = el)}
-          key={item.label}
-          className="py-4 z-20 px-10 min-w-24 text-center rounded-[3.75rem] hover:cursor-pointer duration-500 hover:bg-[#727272] active:bg-[#DAA520]"
-        >
-          <li>{item.label}</li>
-        </Link>
-      ))}
-      <div
-        className="bg-[#DAA520] absolute left-0 z-[0] h-full rounded-[3.75rem] duration-200 "
-        style={{
-          width: `${navItemWidth}px`,
-          transform: `translateX(${navItemPosition}px)`,
-        }}
-      ></div>
-    </ul>
+    <nav className="hidden min-w-[56.75rem] max-w-fit mx-auto lg:block rounded-[3.125rem] border border-[#daa52080] backdrop-blur-xl bg-[#1c1c1c73]/45 p-2">
+      <ul className="flex items-center gap-12 relative">
+        {navItems.map((item, index) => (
+          <Link
+            scroll
+            href={item.href}
+            aria-label={item.label}
+            onClick={() => activeNavItemHandler(item)}
+            ref={(el: any) => (navItemsRef.current[index] = el)}
+            key={item.label}
+            className="py-4 z-20 px-10 min-w-24 text-center rounded-[3.75rem] hover:cursor-pointer duration-500 hover:bg-[#727272] active:bg-[#DAA520]"
+          >
+            <li>{item.label}</li>
+          </Link>
+        ))}
+        <div
+          className="bg-[#DAA520] absolute left-0 z-[0] h-full rounded-[3.75rem] duration-200 "
+          style={{
+            width: `${navItemWidth}px`,
+            transform: `translateX(${navItemPosition}px)`,
+          }}
+        ></div>
+      </ul>
+    </nav>
   );
 };
 
